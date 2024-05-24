@@ -16,11 +16,11 @@ export class TaskService {
     return await this.repository.save(saved);
   }
 
-  findAll() {
-    return `This action returns all task`;
+  async findAll() {
+    return await this.repository.find();
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} task`;
+  async remove(id: number) {
+    return await this.repository.delete(id);
   }
 }
