@@ -6,5 +6,7 @@ export const config: DataSourceOptions = {
     host: 'localhost',
     port: 5432,
     username: 'postgres',
-    password: '12345678'
+    password: '12345678',
+    entities: ['dist/**/*.entity.js'],
+    synchronize: true,
 }
